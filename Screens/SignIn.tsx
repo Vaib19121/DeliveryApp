@@ -29,7 +29,7 @@ const SignIn: React.FC<{navigation: any}> = ({navigation}) => {
       if (res.data.token) {
         dispatch({type: 'setToken', payload: res.data.token});
         console.log('token', res.data.token);
-        // navigation.navigate('MyDrawer', {screen: 'Home'});
+        navigation.navigate('Home');
       }
     } catch (err: any) {
       console.log('error--', err);
@@ -67,7 +67,7 @@ const SignIn: React.FC<{navigation: any}> = ({navigation}) => {
           />
         </View>
         <View style={styles.forgotPassContainer}>
-          <Text style={styles.forgotPassContainerText}>Forgot Password?</Text>
+          <TouchableOpacity onPress={()=>navigation.navigate('Forgot Password')}><Text style={styles.forgotPassContainerText}>Forgot Password?</Text></TouchableOpacity>
         </View>
         <CustomButton
           name="SIGN UP"

@@ -1,4 +1,4 @@
-const BASE_URL = 'http://192.168.51.35:3000/api/';
+const BASE_URL = 'http://192.168.49.192:3000/api/';
 
 export const URLS = {
   SIGN_IN: BASE_URL + 'customer/login',

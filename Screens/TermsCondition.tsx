@@ -7,7 +7,7 @@ import {
 import TandC from '../Components/TandC';
 import CustomButton from '../Components/CustomButton';
 
-const TermsCondition = () => {
+const TermsCondition:React.FC<{navigation:any}> = ({navigation}) => {
   return (
     <SafeAreaView>
       <View style={{backgroundColor: '#fffbf8'}}>
@@ -74,7 +74,7 @@ const TermsCondition = () => {
               name="ACCEPT"
               width={wp('6%')}
               height={hp('6%')}
-              onPress={() => {}}
+              onPress={() => navigation.goBack()}
             />
           </View>
         </ScrollView>

@@ -305,7 +305,7 @@ const useAuthState = () => {
         console.log(res.status);
         throw new Error(res);
       }
-      console.log('response', res);
+      // console.log('response', res);
       return res;
     } catch (err: any) {
       throw new Error(err);

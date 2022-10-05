@@ -11,8 +11,9 @@ const CustomButton: React.FC<{
   height?: number;
   fontColor?: string;
   width: number;
+  disabled?:boolean;
   onPress: () => void;
-}> = ({name, bgColor, height, fontColor, width, onPress}) => {
+}> = ({name, bgColor, height, fontColor, width, onPress,disabled}) => {
   return (
     <TouchableOpacity
       style={{
@@ -28,8 +29,11 @@ const CustomButton: React.FC<{
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        opacity: disabled ? 0.5 : 1,
       }}
-      onPress={onPress}>
+      onPress={onPress}
+      disabled={disabled}
+      >
       <View
         style={{
           justifyContent: 'center',
